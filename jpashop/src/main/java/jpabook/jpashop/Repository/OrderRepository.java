@@ -1,12 +1,9 @@
-package jpabook.jpashop.Repository;
+package jpabook.jpashop.repository;
 
 import jakarta.persistence.EntityManager;
-import jpabook.jpashop.Domain.Order;
+import jpabook.jpashop.domain.Order;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
 
 @Repository
 @RequiredArgsConstructor

@@ -1,8 +1,7 @@
-package jpabook.jpashop.Domain;
+package jpabook.jpashop.domain;
 
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
-import lombok.Setter;
 
 @Embeddable
 @Getter
