@@ -9,8 +9,8 @@ spring:
 
   jpa:
     hibernate:
-#      ddl-auto: create  # 애플리케이션 시작 시마다 데이터베이스 스키마를 새로 생성하므로 기존 데이터를 삭제됨.
-      ddl-auto: none   # 개발 중에는 update, 프로덕션에서는 none 또는 validate
+      ddl-auto: create  # 애플리케이션 시작 시마다 데이터베이스 스키마를 새로 생성하므로 기존 데이터를 삭제됨.
+#      ddl-auto: none   # 개발 중에는 update, 프로덕션에서는 none 또는 validate
     properties:
       hibernate:
 #        show_sql: true
