@@ -1,5 +1,6 @@
 package jpabook.jpashop.repository.order.simplequery;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jpabook.jpashop.domain.Address;
 import jpabook.jpashop.domain.Order;
 import jpabook.jpashop.domain.OrderStatus;
@@ -9,6 +10,8 @@ import java.time.LocalDateTime;
 
 @Data
 public class OrderSimpleQueryDto {
+
+    @JsonIgnore
     private Long orderId;
     private String name;
     private LocalDateTime orderDate;

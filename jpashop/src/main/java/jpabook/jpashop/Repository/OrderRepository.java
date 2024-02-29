@@ -84,4 +84,27 @@ public class OrderRepository {
                         "join fetch o.delivery d", Order.class  // Class 타입의 객체를 반환
         ).getResultList();
     }
+
+    // 컬렉션 조회 (fetch join)
+    public List<Order> findAllWithItem() {
+        return em.createQuery(
+                "select o from Order o" +
+                        " join fetch o.member m" +
+                        " join fetch o.delivery d" +
+                        " join fetch o.orderItems oi" +
+                        " join fetch oi.item i", Order.class)
+                .getResultList();
+    }
+
+    // 컬렉션 조회 (fetch join) + 페이징 추가
+    public List<Order> findAllWithMemberDelivery(int offset, int limit) {
+        return em.createQuery(
+                "select o from Order o " +
+                        "join fetch o.member m " +
+                        "join fetch o.delivery d", Order.class)
+                .setFirstResult(offset)
+                .setMaxResults(limit)
+                .getResultList();
+    }
+
 }
