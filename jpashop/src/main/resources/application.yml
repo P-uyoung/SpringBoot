@@ -16,6 +16,7 @@ spring:
 #        show_sql: true
         format_sql: true
         default_batch_fetch_size: 100
+#    open-in-view: false  # Controller에서 지연로딩을 할 때, 에러가 발생함..
 
 logging:
   level:
